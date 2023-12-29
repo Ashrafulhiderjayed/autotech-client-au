@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { SlArrowRight, SlGameController, SlLocationPin, SlLock } from "react-icons/sl";
 import { RiRedPacketLine } from "react-icons/ri";
 import { RiRedPacketFill } from "react-icons/ri";
+import { SlEnvolopeLetter } from "react-icons/sl";
 
 
 const Footer = () => {
@@ -16,7 +17,7 @@ const Footer = () => {
   }, [])
 
     return (
-        <section className=' bg-primary text-white'>
+        <section className=' bg-footerColor text-white mt-32'>
         <footer className="font-CreteRound footer mt-12 p-10">
           <div>
             <img className='h-16 bg-red-500 rounded-lg' src={logo} alt="" data-aos="fade-left"/>
@@ -74,6 +75,7 @@ const Footer = () => {
           <div>
             <span className="font-extrabold text-white mb-5 text-lg">Get In Touch</span> 
             <p><SlLocationPin className='inline mr-2' size="0.8em" /><a className="link link-hover text-lightWhite"> 42 Circular Quay, Sydney, NSW</a> </p>
+            {/* <p><SlEnvolopeLetter className='inline mr-2' size="0.8em" /><a className="link link-hover text-lightWhite"></a> support@autotech.com </p> */}
             <p><RiRedPacketLine className='inline mr-2' size="0.8em" /><a className="link link-hover text-lightWhite"></a> support@autotech.com </p>
             <p><FaPhone className='inline mr-2 hover:text-white' size="0.8em" /><a className="link link-hover text-lightWhite"> Phone:</a>+61-2-123-1234 </p>
 
@@ -84,7 +86,8 @@ const Footer = () => {
                 placeholder="Your email address"
                 className="input input-bordered input-success w-full max-w-xs" // Adjust padding to make space for the icon
               />
-              <RiRedPacketFill className="absolute left-48 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              {/* <RiRedPacketFill className="absolute left-48 top-1/2 transform -translate-y-1/2 text-gray-400" /> */}
+              <SlEnvolopeLetter className="absolute left-48 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
             
           </div>

@@ -9,12 +9,15 @@ export default {
       colors:{
         // primary: 'Crimson', //eta toy car er color
         // primary: '#fe541d', //eta orange type car rent website er
+        mainColor: '#DB2411',
         rentOrange: '#fe541d', 
-        primary: '#222222',
-        lightWhite: '#999999',
+        footerColor: '#1B3E41',
+        // footerColor: '#163336',
 
-        primary2: '#d81b60',
-        lightRed: '#FF0066',
+        // footerColor: '#222222', //black color
+        // primary: '#222222',
+
+
         customNavy: '#38A2D7',
       },
       fontFamily:{
