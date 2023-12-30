@@ -1,5 +1,6 @@
 import Banner from "../Banner/Banner";
 import Professional from "../Professional/Professional";
+import Services from "../Services/Services";
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div className="mx-auto px-4 max-w-7xl">
             <Banner />
             <Professional />
+            <Services />
         </div>
     );
 };
