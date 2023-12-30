@@ -11,7 +11,7 @@ const Services = () => {
         .then(data => setServices(data))
     },[])
     return (
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-32">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-32 gap-7">
             {
                 services.map(service =><ServicesCard
                 key={service.id}
