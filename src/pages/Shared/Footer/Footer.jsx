@@ -16,7 +16,7 @@ const Footer = () => {
   }, [])
 
     return (
-        <section className=' bg-footerColor text-white mt-32'>
+        <section className=' bg-footerColor text-white'>
         <footer className="font-CreteRound footer mt-12 p-10">
           <div>
             <img className='h-16 bg-red-500 rounded-lg' src={logo} alt="" data-aos="fade-left"/>

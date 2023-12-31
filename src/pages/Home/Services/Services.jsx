@@ -13,7 +13,7 @@ const Services = () => {
     },[])
     return (
         <section className="my-32">
-            <div className="pl-96 mt-48 m-24">
+            <div className="lg:pl-96 mt-48 m-24">
                 <Title className="text-center" text="WHAT WE DO"></Title>
                 <h2 className="text-2xl lg:text-6xl font-bold">Our <br /> Services</h2>
             </div>
