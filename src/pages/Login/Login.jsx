@@ -44,7 +44,7 @@ const Login = () => {
                     </form>
                 </div>
                 {/* right div  */}
-                <div id='changed-item-vertically' className="lg:flex-1 px-5 order-1 lg:order-2 bg-gradient-to-r from-[#ff2b2b] to-[#FF416C] text-white text-center w-96 items-center justify-center">
+                <div id='changed-item-vertically' className="lg:flex-1 px-5 order-1 lg:order-2 bg-gradient-to-tr from-[#FF416C] to-[#ff2b2b] text-white text-center w-96 items-center justify-center">
                     <h2 className="items-center text-5xl text-center font-bold pt-8">Hello Users!</h2>
                     <p className="my-4">Exclusive discount for new members only, join before it's too late!</p>
                     <NavLink to="/signup">

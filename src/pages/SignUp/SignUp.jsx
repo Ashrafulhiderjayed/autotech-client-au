@@ -13,7 +13,7 @@ const SignUp = () => {
         <section className="hero min-h-screen bg-base-200">
             <div className="flex flex-col lg:flex-row-reverse shadow-xl hover:shadow-lg">
                 {/* without signUp div  */}
-                <div id='changed-item-vertically' className="lg:flex-1 px-5 order-1 lg:order-2 bg-gradient-to-r from-[#ff2b2b] to-[#FF416C] text-white text-center w-96 items-center justify-center">
+                <div id='changed-item-vertically' className="lg:flex-1 px-5 order-1 lg:order-2 bg-gradient-to-br from-[#ff2b2b] to-[#FF416C] text-white text-center w-96 items-center justify-center">
                     <h2 className="items-center text-5xl text-center font-bold pt-8">Welcome Back!</h2>
                     <p className="my-4">Are you have created account before? If you are already a valid user. Please sign in</p>
                     <NavLink to="/login">
