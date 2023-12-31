@@ -5,6 +5,9 @@ import './Login.css'
 import { NavLink } from "react-router-dom";
 
 const Login = () => {
+    const handleLogin = event =>{
+        event.preventDefault();
+    }
     return (
         <section className="hero min-h-screen bg-base-200">
             <div className="flex flex-col lg:flex-row shadow-xl hover:shadow-lg">
@@ -17,7 +20,7 @@ const Login = () => {
                         <FaLinkedinIn className="border border-slate-400 rounded-full text-xl p-2 shadow-md hover:shadow-transparent box-content" />
                     </span>
                     <p className="text-zinc-600 text-center pt-2">or use your account</p>
-                    <form className="card-body">
+                    <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>

@@ -6,6 +6,9 @@ import './SignUp.css'
 import { NavLink } from "react-router-dom";
 
 const SignUp = () => {
+    const handleSignup = e =>{
+        e.preventDefault();
+    }
     return (
         <section className="hero min-h-screen bg-base-200">
             <div className="flex flex-col lg:flex-row-reverse shadow-xl hover:shadow-lg">
