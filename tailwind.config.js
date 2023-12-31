@@ -12,6 +12,7 @@ export default {
         mainColor: '#DB2411',
         rentOrange: '#fe541d', 
         footerColor: '#1B3E41',
+        loginOrangeColor: '#FF4B2B',
         // footerColor: '#163336',
 
         // footerColor: '#222222', //black color
