@@ -9,8 +9,8 @@ const ServicesCard = ({service}) => {
         <img src={img} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{title}</h2>
-        <p>{description}</p>
+        <h2 className="card-title font-extrabold">{title}</h2>
+        <p className='text-justify'>{description}</p>
         <div className="card-actions">
             {/* default button */}
           {/* <button className="btn btn-primary btn-sm w-full bg-mainColor font-normal text-white hover:bg-black hover:drop-shadow-xl capitalize text-shadow-lg border-0">Book Now</button> */}

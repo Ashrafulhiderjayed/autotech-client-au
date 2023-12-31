@@ -87,7 +87,7 @@ const Footer = () => {
                 className="input input-bordered input-success w-full max-w-xs" // Adjust padding to make space for the icon
               />
               {/* <RiRedPacketFill className="absolute left-48 top-1/2 transform -translate-y-1/2 text-gray-400" /> */}
-              <SlEnvolopeLetter className="absolute left-48 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <SlEnvolopeLetter className="absolute left-48 top-1/2 transform -translate-y-1/2 text-gray-600" />
             </div>
             
           </div>
