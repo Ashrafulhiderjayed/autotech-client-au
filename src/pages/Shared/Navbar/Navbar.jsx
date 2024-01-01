@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import logo from '../../../../../../assets'
+import logo from '../../../assets/img/autoTech-logo.jpg'
 import { useContext } from 'react';
-import { AuthContext } from '../../../Providers/AuthProvider';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
@@ -12,14 +12,14 @@ const Navbar = () => {
 
   const navItems = <>
   <li><Link to='/'>Home</Link></li>
-  <li><Link to='/alltoys'>All Vehicles</Link></li>
+  <li><Link to='/'>All Vehicles</Link></li>
   {
-    user && <li><Link to='/mytoys'>My Vehicles</Link></li>
+    user && <li><Link to='/'>My Vehicles</Link></li>
   }
   {
-    <li><Link to='/addaToy'>Add a Vehicle</Link></li>
+    <li><Link to='/'>Add a Vehicle</Link></li>
   }
-  <li><Link to='/blogs'>Blogs</Link></li>
+  <li><Link to='/'>Blogs</Link></li>
   </>
   return (
   <div className="font-CreteRound navbar bg-base-100 mx-auto px-4 max-w-7xl">

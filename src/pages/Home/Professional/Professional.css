@@ -4,3 +4,7 @@
 .parallelogram1 {
 	transform: skew(20deg);
 }
+#horizontally-align-text{
+	display: flex;
+	align-items: center;
+}

@@ -12,7 +12,7 @@ const Services = () => {
         .then(data => setServices(data))
     },[])
     return (
-        <section className="my-32">
+        <section className="lg:my-32">
             <div className="lg:pl-96 mt-48 m-24">
                 <Title className="text-center" text="WHAT WE DO"></Title>
                 <h2 className="text-2xl lg:text-6xl font-bold">Our <br /> Services</h2>
