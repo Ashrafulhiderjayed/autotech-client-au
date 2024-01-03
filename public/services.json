@@ -2,151 +2,55 @@
     {
         "service_id": "01",
         "title": "Engine Oil Change",
+        "top": "Top Oil Changes Service in Sydney, Australia",
         "img": "https://i.ibb.co/5YmGbBd/s1.webp",
         "price": "23.33",
         "description": "Uncover hidden issues with our cutting-edge diagnostic services. Our technicians employ advanced tools for accurate and thorough diagnostics, ensuring your vehicle operates at peak efficiency. Count on us to identify and address problems promptly.",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+        "detailDescription": "Regular engine oil changes are crucial for keeping your car running smoothly and efficiently. The oil lubricates the engine's moving parts, reduces friction, and helps prevent overheating. Over time, oil breaks down and accumulates contaminants, so it's important to drain it and replace it with fresh oil at the recommended intervals (usually every 3,000-5,000 miles). Our skilled technicians use top-grade oils to ensure peak performance and longevity, providing your vehicle with the care it deserves."
     },
     {
         "service_id": "02",
         "title": "Diagnostic",
+        "top": "Top Diagnostic Service in Perth, Australia",
         "img": "https://i.ibb.co/yfcsvVd/s2.webp",
         "price": "20.00",
         "description": "Uncover hidden issues with our cutting-edge diagnostic services. Our skilled technicians employ advanced tools to identify and address potential problems, ensuring your vehicle operates at peak efficiency. Count on us for accurate and thorough diagnostics.",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+        "detailDescription": "Trust our advanced diagnostic services to pinpoint issues accurately. If your car starts acting up, a diagnostic scan can help pinpoint the problem. This involves connecting a computer to the car's onboard diagnostics system, which can read and interpret error codes. This can save you time and money by preventing you from chasing down phantom problems."
     },
     {
         "service_id": "03",
         "title": "Engines",
+        "top": "Top Engine Changes Service in Brisbane, Australia",
         "img": "https://i.ibb.co/F0jDvQd/s3.webp",
         "price": "200.00",
         "description": "Restore power and efficiency to your vehicle with our expert engine services. Whether it's routine maintenance or a major overhaul, our skilled technicians have the expertise to keep your engine in top condition, ensuring a reliable and powerful driving experience.",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+        "detailDescription": "The engine is the heart of your car, and it's important to take good care of it. Experience optimal power and efficiency with our expert engine services. This includes following the recommended maintenance schedule for oil changes, tune-ups, and filter replacements. You should also listen for any unusual noises or changes in performance, which could be signs of a problem."
     },
     {
         "service_id": "04",
         "title": "Brakes",
+        "top": "Top Brakes Changes Service in Canberra, Australia",
         "img": "https://i.ibb.co/F0jDvQd/s3.webp",
         "price": "150.00",
         "description": "Safety is paramount, and our brake services guarantee reliable stopping power. From brake inspections to pad replacements, our technicians are dedicated to keeping your braking system in optimal condition for a secure and confident ride with confidence.",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+        "detailDescription": "Safety is paramount. Rely on our expert brake services to maintain reliable stopping power. Your brakes are essential for safety, so it's important to make sure they're in good working order. This includes checking the brake pads and rotors for wear and tear, and making sure the brake fluid is at the correct level. If you notice any problems with your brakes, such as grinding noises or a spongy pedal, get them checked out by a mechanic right away."
     },
     {
         "service_id": "05",
         "title": "Transmissions",
+        "top": "Top Transmission Changes Service in Darwin, Australia",
         "img": "https://i.ibb.co/34cnWkn/s5.webp",
         "price": "30.00",
         "description": "Ensure a smooth and efficient ride with our transmission services. Our technicians are well-versed in diagnosing and repairing transmission issues, ensuring that your vehicle shifts gears seamlessly and performs at its best. Seamless shifts are just a shift away",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+        "detailDescription": "Ensure a smooth ride with our specialized transmission services.The transmission is responsible for transferring power from the engine to the wheels. It's a complex system, and it's important to keep it well-maintained. This includes changing the transmission fluid at the recommended intervals, and avoiding any practices that could put stress on the transmission, such as towing heavy loads or racing."
     },
     {
         "service_id": "06",
         "title": "Tires & Wheels:",
+        "top": "Top Tires & Wheels Changes Service in Hobart, Australia",
         "img": "https://i.ibb.co/bmcZczT/s6.webp",
         "price": "20.00",
         "description": "Maximize your vehicle's traction and handling with our comprehensive tire and wheel services. From tire rotations to wheel alignments, our experts ensure even tire wear and proper alignment, contributing to a smoother driving experience on any road.",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+        "detailDescription": "Your tires are the only contact your car has with the road, so it's important to make sure they're in good condition. This includes checking the tread depth for wear, and making sure the tires are properly inflated. You should also have your wheels aligned regularly to ensure even tire wear and optimal handling. Maximize traction and handling with our comprehensive tire and wheel services."
     }
 ]

@@ -1,8 +1,8 @@
 import { FaArrowRight } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ServicesCard = ({service}) => {
-    const {title, img, description} = service;
+    const {_id, title, img, description} = service;
   return (
     <section className="card card-compact w-96 bg-base-100 hover:drop-shadow-xl">
       <figure>
@@ -15,9 +15,9 @@ const ServicesCard = ({service}) => {
             {/* default button */}
           {/* <button className="btn btn-primary btn-sm w-full bg-mainColor font-normal text-white hover:bg-black hover:drop-shadow-xl capitalize text-shadow-lg border-0">Book Now</button> */}
           <button className="btn btn-outline hover:text-white btn-success">
-            <NavLink className="">
+            <Link to={`/service/${_id}`}>
                 Book Now <FaArrowRight className="inline ml-2" />{' '}
-            </NavLink>
+            </Link>
           </button>
         </div>
       </div>
