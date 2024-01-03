@@ -22,7 +22,7 @@ const Navbar = () => {
   <li><Link to='/'>Blogs</Link></li>
   </>
   return (
-  <div className="font-CreteRound navbar bg-base-100 mx-auto px-4 max-w-7xl">
+  <div className="font-CreteRound navbar bg-base-100 mx-auto max-w-7xl">
     <img className='h-14 bg-red-500 rounded-lg' src={logo} alt="" />
     {/* <a className="btn btn-ghost normal-case text-xl font-bold"><FaCar className='text-primary2 mr-1'/>Wheels</a> */}
     <div className="navbar-start">
