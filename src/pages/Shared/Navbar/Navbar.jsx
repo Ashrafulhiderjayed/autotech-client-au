@@ -12,12 +12,12 @@ const Navbar = () => {
 
   const navItems = <>
   <li><Link to='/'>Home</Link></li>
-  <li><Link to='/'>All Vehicles</Link></li>
+  <li><Link to='/'>All Appointments</Link></li>
   {
-    user && <li><Link to='/'>My Vehicles</Link></li>
+    user && <li><Link to='/'>My Appointments</Link></li>
   }
   {
-    <li><Link to='/'>Add a Vehicle</Link></li>
+    <li><Link to='/'>Add a Appointment</Link></li>
   }
   <li><Link to='/'>Blogs</Link></li>
   </>
