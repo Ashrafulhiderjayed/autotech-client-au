@@ -9,7 +9,11 @@ import { GiCarWheel } from "react-icons/gi";
 import { MdAttractions } from "react-icons/md";
 import { PiFanBold } from "react-icons/pi";
 import { SiGoogleearthengine } from "react-icons/si";
-import { RiMoneyDollarCircleFill } from "react-icons/ri";
+
+import { GrSchedules } from "react-icons/gr";
+import { MdOutlineGppGood } from "react-icons/md";
+import { Ri24HoursLine } from "react-icons/ri";
+import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 import './Services.css';
 
 const Services = () => {
@@ -116,40 +120,103 @@ const Services = () => {
 
     <section className='flex justify-between'>
         {/* Left Div  */}
-      <div>
+      <div className='flex-1 lg:pr-32'>
         <div className='flex gap-5'>
-        <RiMoneyDollarCircleFill className='text-3xl text-mainColor' />
+        <GrSchedules className='text-3xl text-mainColor' />
           <div>
-            <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
-            <p className='w-4/5'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
+            <h5 className='text-lg font-bold mb-1'>Online appointment</h5>
+            <p className='text-justify'>Customers can schedule appointments online or through a mobile app, saving them time and hassle.</p>
           </div>
         </div>
         <div className='flex mt-5 gap-5'>
-        <RiMoneyDollarCircleFill className='text-3xl text-mainColor' />
+        <MdOutlineGppGood className='text-3xl text-mainColor' />
           <div>
-            <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
-            <p className='w-4/5'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
+            <h5 className='text-lg font-bold mb-1'>Service warrenty</h5>
+            <p className='text-justify'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
           </div>
         </div>
         <div className='flex my-5 gap-5'>
-        <RiMoneyDollarCircleFill className='text-3xl text-mainColor' />
+        <LiaMoneyBillWaveAltSolid className='text-3xl text-mainColor' />
           <div>
             <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
-            <p className='w-4/5'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
+            <p className='text-justify'>We offer competitive prices on all of our services. We also use high-quality parts and materials.</p>
           </div>
         </div>
         <div className='flex gap-5'>
-        <RiMoneyDollarCircleFill className='text-3xl text-mainColor' />
+        <Ri24HoursLine className='text-3xl text-mainColor' />
           <div>
-            <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
-            <p className='w-4/5'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
+            <h5 className='text-lg font-bold mb-1'>Available 24 hours</h5>
+            <p className='text-justify'>Customers can schedule appointments online or through a mobile app, saving them time and hassle.</p>
           </div>
         </div>
       </div>
 
         {/* Right Div */}
-      <div className='mt-14 bg-yellow-200'>
-        wwddfd
+      <div className='flex-1 p-4 bg-gradient-to-b from-slate-300 to-transparent'>
+      <form className="card-body">
+        <div className="form-control">
+          <input type="name" placeholder="Your Name" className="input input-bordered" required />
+        </div>
+
+        <div className='flex gap-5 my-5'>
+          <div className="form-control flex-1">
+            <input type="email" placeholder="Email" className="input" required />
+          </div>
+          <div className="form-control flex-1">
+            <input type="email" placeholder="Phone" className="input" required />
+          </div>
+        </div>
+        <select className="select select-bordered join-item">
+          <option selected>Appointment Reason</option>
+          <option>Engine Oil Change</option>
+          <option>Diagnostic</option>
+          <option>Car Checks</option>
+          <option>Brakes</option>
+          <option>Transmissions</option>
+          <option>Tires & Wheels</option>
+        </select>
+        <div className="form-control my-5">
+            <input type="text" placeholder="Vehicle Eg:Crown A25A-FXS-2024" className="input input-bordered" required />
+        </div>
+
+        <div className='flex gap-16 my-5'>
+          <div className='flex justify-center gap-3'>
+            <input type="radio" id="morning" name="radio-8" className="radio" checked />
+            <label htmlFor="morning">Shuttle</label>
+          </div>
+          
+          <div className='flex justify-center gap-3'>
+            <input type="radio" id="morning" name="radio-8" className="radio" />
+            <label htmlFor="morning">Towed</label>
+          </div>
+        </div>
+
+        {/* <div>
+          <input type="radio" name="radio-8" className="radio radio-error" checked />
+          <input type="radio" name="radio-8" className="radio radio-error" />
+        </div> */}
+
+        <div className='flex gap-5 mb-5'>
+          <div className="form-control flex-1">
+          <input type="date" id="start" className='input' name="trip-start" value="2024-07-10" min="2018-01-01" max="2026-03-30" />
+          </div>
+
+          <div className="form-control flex-1">
+            <select className="select select-bordered join-item">
+            <option selected>Time</option>
+            <option>09:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>12:00 PM</option>
+            <option>03:00 PM</option>
+          </select>
+          </div>
+        </div>
+
+        <div className="form-control mt-6">
+          <button className="btn bg-mainColor text-white">Submit Now</button>
+        </div>
+      </form> 
       </div>
     </section>
     </section>
