@@ -1,11 +1,20 @@
 import { useLoaderData } from 'react-router-dom';
 import backgroundImage from '../../assets/img/SUV-blue.svg';
 import { TbCircleCheckFilled } from "react-icons/tb";
+import { RiOilFill } from "react-icons/ri";
+import { FaCarCrash } from "react-icons/fa";
+import { GiAutoRepair } from "react-icons/gi";
+import { GiCartwheel } from "react-icons/gi";
+import { GiCarWheel } from "react-icons/gi";
+import { MdAttractions } from "react-icons/md";
+import { PiFanBold } from "react-icons/pi";
+import { SiGoogleearthengine } from "react-icons/si";
+import './Services.css';
 
 const Services = () => {
     const heroStyle = {
         backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: '75px 0',
+        backgroundPosition: '86px 0',
         backgroundSize: 'cover',     
         backgroundRepeat: 'no-repeat'
     }
@@ -14,7 +23,7 @@ const Services = () => {
     const {title, top, description, detailDescription, _id} = services;
   return (
     <>
-    {/* Swction 1: Heading part */}
+    {/* Swction 1: Heading part ==================*/}
     <section className="hero justify-start" style={heroStyle}>
 
       <div className='bg-gradient-to-r from-black to-transparent'>
@@ -31,11 +40,11 @@ const Services = () => {
       </div>
     </section>
 
-    {/* Swction 2: service Category and text part */}
+    {/* Swction 2: service Category and text part ============*/}
     <section className='my-28'>
-    <div className="grid grid-cols-12 bg-slate-300 mx-auto max-w-7xl">
+    <div className="grid grid-cols-12 mx-auto max-w-7xl">
         {/* <!-- Left side (takes full width on small screens and 70% on large screens) --> */}
-        <div className="col-span-12 lg:col-span-8 bg-red-100 pr-2">
+        <div className="col-span-12 lg:col-span-8 pr-2">
             {/* <!-- Your content for the left side goes here --> */}
             <h2 className='text-3xl font-bold'>{top}</h2>
             <p className='mt-3 mb-7 text-justify'>{detailDescription}</p>
@@ -54,10 +63,47 @@ const Services = () => {
         </div>
 
         {/* <!-- Right side (takes full width on small screens and 30% on large screens) --> */}
-        <div className="col-span-12 md:col-span-4 bg-yellow-300">
+        <section className="col-span-12 md:col-span-4 w-5/6 px-7">
             {/* <!-- Your content for the right side goes here --> */}
-            Right Side (30%)
-        </div>
+            <div className='shadow-2xl'>
+              {/* <span className='w-3 h-5 bg-mainColor mr-4' id='custom-color'></span> */}
+              <div className='w-full h-2 bg-mainColor'></div>
+              <ul>
+                <li className='flex justify-between py-4 px-7 font-bold border-gray-300 hover:text-black hover:font-extrabold hover:bg-gray-100'>
+                  <a href="">Engine Oil Change</a>
+                  <RiOilFill className='text-2xl text-gray-500' />
+                </li>
+                <li className='flex justify-between py-4 px-7 font-bold border-t-2 border-gray-300 hover:text-black hover:font-extrabold hover:bg-gray-100'>
+                  <a href="">Diagnostic</a>
+                  <GiAutoRepair className='text-2xl text-gray-500' />
+                </li>
+                <li className='flex justify-between py-4 px-7 font-bold border-t-2 border-gray-300 hover:text-black hover:font-extrabold hover:bg-gray-100'>
+                  <a href="">Car Checks</a>
+                  <FaCarCrash className='text-2xl text-gray-500' />
+                </li>
+                <li className='flex justify-between py-4 px-7 font-bold border-t-2 border-gray-300 hover:text-black hover:font-extrabold hover:bg-gray-100'>
+                  <a href="">Air Conditioning</a>
+                  <PiFanBold className='text-2xl text-gray-500' />
+                </li>
+                <li className='flex justify-between py-4 px-7 font-bold border-t-2 border-gray-300 hover:text-black hover:font-extrabold hover:bg-gray-100'>
+                  <a href="">Engines</a>
+                  <SiGoogleearthengine className='text-2xl text-gray-500' />
+                </li>
+                <li className='flex justify-between py-4 px-7 font-bold border-t-2 border-gray-300 hover:text-black hover:font-extrabold hover:bg-gray-100'>
+                  <a href="">Brakes</a>
+                  <GiCartwheel className='text-2xl text-gray-500' />
+                </li>
+                <li className='flex justify-between py-4 px-7 font-bold border-t-2 border-gray-300 hover:text-black hover:font-extrabold hover:bg-gray-100'>
+                  <a href="">Transmissions</a>
+                  <MdAttractions className='text-2xl text-gray-500' />
+                </li>
+                <li className='flex justify-between py-4 px-7 font-bold border-t-2 border-gray-300 hover:text-black hover:font-extrabold hover:bg-gray-100'>
+                  <a href="">Tires & Wheels</a>
+                  <GiCarWheel className='text-2xl text-gray-500' />
+                </li>
+              </ul>
+            </div>
+        </section>
     </div>
     </section>
     </>
