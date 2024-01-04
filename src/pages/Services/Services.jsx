@@ -9,6 +9,7 @@ import { GiCarWheel } from "react-icons/gi";
 import { MdAttractions } from "react-icons/md";
 import { PiFanBold } from "react-icons/pi";
 import { SiGoogleearthengine } from "react-icons/si";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import './Services.css';
 
 const Services = () => {
@@ -47,7 +48,7 @@ const Services = () => {
         <div className="col-span-12 lg:col-span-8 pr-2">
             {/* <!-- Your content for the left side goes here --> */}
             <h2 className='text-3xl font-bold'>{top}</h2>
-            <p className='mt-3 mb-7 text-justify'>{detailDescription}</p>
+            <p className='mt-3 mb-9 text-justify'>{detailDescription}</p>
 
             <h4 className='text-xl font-bold my-1'>Common issues</h4>
             <p className='mb-4 text-justify'>Don't get stranded on the road! From frustrating flats and pesky check engine lights to sluggish brakes and sizzling engines, our expert mechanics tackle common car woes big and small. Let us diagnose and fix the hiccups before they become headaches. Get your car purring again with a click!</p>
@@ -63,7 +64,7 @@ const Services = () => {
         </div>
 
         {/* <!-- Right side (takes full width on small screens and 30% on large screens) --> */}
-        <section className="col-span-12 md:col-span-4 w-5/6 px-7">
+        <section className="col-span-12 md:col-span-4 w-5/6 lg:ms-10 px-7">
             {/* <!-- Your content for the right side goes here --> */}
             <div className='shadow-2xl'>
               {/* <span className='w-3 h-5 bg-mainColor mr-4' id='custom-color'></span> */}
@@ -105,6 +106,52 @@ const Services = () => {
             </div>
         </section>
     </div>
+    </section>
+
+    {/* Section: 3 ========================================= */}
+    <section className='mx-auto max-w-7xl'>
+    {/* Left Div */}
+    <h2 className='text-3xl font-bold'>Service Benefits</h2>
+    <p className='text-justify mb-14'>We prioritize honesty with upfront pricing and clear communication, keeping you informed every step of the way. Convenient scheduling, online tracking, and a commitment to customer satisfaction ensure a smooth experience. Get your car back to its best - visit our website or call today, and drive with the assurance of quality service and lasting results.</p>
+
+    <section className='flex justify-between'>
+        {/* Left Div  */}
+      <div>
+        <div className='flex gap-5'>
+        <RiMoneyDollarCircleFill className='text-3xl text-mainColor' />
+          <div>
+            <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
+            <p className='w-4/5'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
+          </div>
+        </div>
+        <div className='flex mt-5 gap-5'>
+        <RiMoneyDollarCircleFill className='text-3xl text-mainColor' />
+          <div>
+            <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
+            <p className='w-4/5'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
+          </div>
+        </div>
+        <div className='flex my-5 gap-5'>
+        <RiMoneyDollarCircleFill className='text-3xl text-mainColor' />
+          <div>
+            <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
+            <p className='w-4/5'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
+          </div>
+        </div>
+        <div className='flex gap-5'>
+        <RiMoneyDollarCircleFill className='text-3xl text-mainColor' />
+          <div>
+            <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
+            <p className='w-4/5'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
+          </div>
+        </div>
+      </div>
+
+        {/* Right Div */}
+      <div className='mt-14 bg-yellow-200'>
+        wwddfd
+      </div>
+    </section>
     </section>
     </>
   );
