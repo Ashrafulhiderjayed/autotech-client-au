@@ -9,12 +9,12 @@ import { GiCarWheel } from "react-icons/gi";
 import { MdAttractions } from "react-icons/md";
 import { PiFanBold } from "react-icons/pi";
 import { SiGoogleearthengine } from "react-icons/si";
-
 import { GrSchedules } from "react-icons/gr";
 import { MdOutlineGppGood } from "react-icons/md";
 import { Ri24HoursLine } from "react-icons/ri";
 import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 import './Services.css';
+import { useEffect } from 'react';
 
 const Services = () => {
     const heroStyle = {
@@ -26,6 +26,12 @@ const Services = () => {
 
     const services = useLoaderData();
     const {title, top, description, detailDescription, _id} = services;
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
+    
   return (
     <>
     {/* Swction 1: Heading part ==================*/}
@@ -114,11 +120,10 @@ const Services = () => {
 
     {/* Section: 3 ========================================= */}
     <section className='mx-auto max-w-7xl'>
-    {/* Left Div */}
     <h2 className='text-3xl font-bold'>Service Benefits</h2>
     <p className='text-justify mb-14'>We prioritize honesty with upfront pricing and clear communication, keeping you informed every step of the way. Convenient scheduling, online tracking, and a commitment to customer satisfaction ensure a smooth experience. Get your car back to its best - visit our website or call today, and drive with the assurance of quality service and lasting results.</p>
 
-    <section className='flex justify-between'>
+    <section className='lg:flex justify-between'>
         {/* Left Div  */}
       <div className='flex-1 lg:pr-32'>
         <div className='flex gap-5'>
@@ -128,14 +133,14 @@ const Services = () => {
             <p className='text-justify'>Customers can schedule appointments online or through a mobile app, saving them time and hassle.</p>
           </div>
         </div>
-        <div className='flex mt-5 gap-5'>
+        <div className='flex mt-7 gap-5'>
         <MdOutlineGppGood className='text-3xl text-mainColor' />
           <div>
             <h5 className='text-lg font-bold mb-1'>Service warrenty</h5>
             <p className='text-justify'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
           </div>
         </div>
-        <div className='flex my-5 gap-5'>
+        <div className='flex my-7 gap-5'>
         <LiaMoneyBillWaveAltSolid className='text-3xl text-mainColor' />
           <div>
             <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
@@ -149,21 +154,28 @@ const Services = () => {
             <p className='text-justify'>Customers can schedule appointments online or through a mobile app, saving them time and hassle.</p>
           </div>
         </div>
+        <div className='flex mt-7 gap-5'>
+        <Ri24HoursLine className='text-3xl text-mainColor' />
+          <div>
+            <h5 className='text-lg font-bold mb-1'>Friendly Environment</h5>
+            <p className='text-justify'>Here, car care feels like a friendly catch-up. Our bright,no tech jargon, while we treat your car and the planet with equal care. </p>
+          </div>
+        </div>
       </div>
 
         {/* Right Div */}
       <div className='flex-1 p-4 bg-gradient-to-b from-slate-300 to-transparent'>
       <form className="card-body">
         <div className="form-control">
-          <input type="name" placeholder="Your Name" className="input input-bordered" required />
+          <input type="name" name="name" placeholder="Your Name" className="input input-bordered" required />
         </div>
 
         <div className='flex gap-5 my-5'>
           <div className="form-control flex-1">
-            <input type="email" placeholder="Email" className="input" required />
+            <input type="email" name="email" placeholder="Email" className="input" required />
           </div>
           <div className="form-control flex-1">
-            <input type="email" placeholder="Phone" className="input" required />
+            <input type="email" name="phone" placeholder="Phone" className="input" required />
           </div>
         </div>
         <select className="select select-bordered join-item">
@@ -176,10 +188,10 @@ const Services = () => {
           <option>Tires & Wheels</option>
         </select>
         <div className="form-control my-5">
-            <input type="text" placeholder="Vehicle Eg:Crown A25A-FXS-2024" className="input input-bordered" required />
+            <input type="text" name="vehicle" placeholder="Vehicle Eg:Crown FXS-2024" className="input input-bordered" required />
         </div>
 
-        <div className='flex gap-16 my-5'>
+        <div className='flex gap-16 mb-5'>
           <div className='flex justify-center gap-3'>
             <input type="radio" id="morning" name="radio-8" className="radio" checked />
             <label htmlFor="morning">Shuttle</label>
@@ -191,14 +203,9 @@ const Services = () => {
           </div>
         </div>
 
-        {/* <div>
-          <input type="radio" name="radio-8" className="radio radio-error" checked />
-          <input type="radio" name="radio-8" className="radio radio-error" />
-        </div> */}
-
         <div className='flex gap-5 mb-5'>
           <div className="form-control flex-1">
-          <input type="date" id="start" className='input' name="trip-start" value="2024-07-10" min="2018-01-01" max="2026-03-30" />
+          <input type="date" name="trip-start" id="start" className='input' value="2024-07-10" min="2018-01-01" max="2026-03-30" />
           </div>
 
           <div className="form-control flex-1">
@@ -214,7 +221,7 @@ const Services = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn bg-mainColor text-white">Submit Now</button>
+          <button className="btn bg-mainColor text-white hover:bg-black" type='submit'>Submit Now</button>
         </div>
       </form> 
       </div>
