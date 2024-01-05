@@ -28,6 +28,7 @@ const Services = () => {
   }
 
   const services = useLoaderData();
+  // console.log('services', services)
   const {title, top, description, detailDescription, _id} = services;
 
   const handleBookService = event =>{
@@ -35,10 +36,11 @@ const Services = () => {
 
     const form = event.target;
     const name = form.name.value;
+    const appointment = form.appointment.value;
     const date = form.date.value;
     const vehicle = form.vehicle.value;
     const time = form.time.value;
-    const transportation_preference = form.shuttle.value || form.towed.value;
+    // const transportation_preference = form.shuttle.value || form.towed.value;
     const email = user?.email || form.email.value;
     const phone = user?.phone || form.phone.value;
     const booking = {
@@ -48,12 +50,29 @@ const Services = () => {
         vehicle,
         date, 
         time,
-        transportation_preference,
-        service: title,
+        // transportation_preference,
+        appointment,
         service_id: _id, 
     }
     console.log(booking);
-    form.reset();
+
+    // fetch(`http://localhost:5173/service/${services._id}`,{
+    fetch(`http://localhost:5000/bookings`,{
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(booking)
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    if(data.insertedId){
+      alert('Appointment booked Seccessfully')
+    }
+  })
+
+    // form.reset();
   }
 
   useEffect(() => {
@@ -208,14 +227,14 @@ const Services = () => {
             <input type="text" name="phone" placeholder="Phone" className="input" required />
           </div>
         </div>
-        <select className="select select-bordered join-item">
+        <select name='appointment' className="select select-bordered join-item">
           <option selected>Appointment Reason</option>
-          <option>Engine Oil Change</option>
-          <option>Diagnostic</option>
-          <option>Car Checks</option>
-          <option>Brakes</option>
-          <option>Transmissions</option>
-          <option>Tires & Wheels</option>
+          <option value="Engine Oil Change">Engine Oil Change</option>
+          <option value="Diagnostic">Diagnostic</option>
+          <option value="Car Checks">Car Checks</option>
+          <option value="Brakes">Brakes</option>
+          <option value="Transmissions">Transmissions</option>
+          <option value="Tires & Wheels">Tires & Wheels</option>
         </select>
         <div className="form-control my-5">
             <input type="text" name="vehicle" placeholder="Vehicle Eg:Crown FXS-2024" className="input input-bordered" required />
