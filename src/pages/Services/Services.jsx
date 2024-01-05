@@ -13,23 +13,52 @@ import { GrSchedules } from "react-icons/gr";
 import { MdOutlineGppGood } from "react-icons/md";
 import { Ri24HoursLine } from "react-icons/ri";
 import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
+import { TbFriends } from "react-icons/tb";
 import './Services.css';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Services = () => {
-    const heroStyle = {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: '86px 0',
-        backgroundSize: 'cover',     
-        backgroundRepeat: 'no-repeat'
+  const {user} = useContext(AuthContext);
+  const heroStyle = {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundPosition: '86px 0',
+      backgroundSize: 'cover',     
+      backgroundRepeat: 'no-repeat'
+  }
+
+  const services = useLoaderData();
+  const {title, top, description, detailDescription, _id} = services;
+
+  const handleBookService = event =>{
+    event.preventDefault();
+
+    const form = event.target;
+    const name = form.name.value;
+    const date = form.date.value;
+    const vehicle = form.vehicle.value;
+    const time = form.time.value;
+    const transportation_preference = form.shuttle.value || form.towed.value;
+    const email = user?.email || form.email.value;
+    const phone = user?.phone || form.phone.value;
+    const booking = {
+        customerName: name, 
+        email, 
+        phone,
+        vehicle,
+        date, 
+        time,
+        transportation_preference,
+        service: title,
+        service_id: _id, 
     }
+    console.log(booking);
+    form.reset();
+  }
 
-    const services = useLoaderData();
-    const {title, top, description, detailDescription, _id} = services;
-
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
     
   return (
@@ -121,7 +150,7 @@ const Services = () => {
     {/* Section: 3 ========================================= */}
     <section className='mx-auto max-w-7xl'>
     <h2 className='text-3xl font-bold'>Service Benefits</h2>
-    <p className='text-justify mb-14'>We prioritize honesty with upfront pricing and clear communication, keeping you informed every step of the way. Convenient scheduling, online tracking, and a commitment to customer satisfaction ensure a smooth experience. Get your car back to its best - visit our website or call today, and drive with the assurance of quality service and lasting results.</p>
+    <p className='text-justify mt-4 mb-14'>We prioritize honesty with upfront pricing and clear communication, keeping you informed every step of the way. Convenient scheduling, online tracking, and a commitment to customer satisfaction ensure a smooth experience. Get your car back to its best - visit our website or call today, and drive with the assurance of quality service and lasting results.</p>
 
     <section className='lg:flex justify-between'>
         {/* Left Div  */}
@@ -133,49 +162,50 @@ const Services = () => {
             <p className='text-justify'>Customers can schedule appointments online or through a mobile app, saving them time and hassle.</p>
           </div>
         </div>
-        <div className='flex mt-7 gap-5'>
+        <div className='flex my-7 gap-5'>
         <MdOutlineGppGood className='text-3xl text-mainColor' />
           <div>
             <h5 className='text-lg font-bold mb-1'>Service warrenty</h5>
             <p className='text-justify'>Sed tellus augue, hendrerit eu rutrum in, porttitor at metusris ac hendrerit metus.</p>
           </div>
         </div>
-        <div className='flex my-7 gap-5'>
+        <div className='flex gap-5'>
         <LiaMoneyBillWaveAltSolid className='text-3xl text-mainColor' />
           <div>
             <h5 className='text-lg font-bold mb-1'>Low Cost</h5>
             <p className='text-justify'>We offer competitive prices on all of our services. We also use high-quality parts and materials.</p>
           </div>
         </div>
-        <div className='flex gap-5'>
+        <div className='flex my-7 gap-5'>
         <Ri24HoursLine className='text-3xl text-mainColor' />
           <div>
             <h5 className='text-lg font-bold mb-1'>Available 24 hours</h5>
             <p className='text-justify'>Customers can schedule appointments online or through a mobile app, saving them time and hassle.</p>
           </div>
         </div>
-        <div className='flex mt-7 gap-5'>
-        <Ri24HoursLine className='text-3xl text-mainColor' />
+
+        <div className='flex gap-5'>
+        <TbFriends className='text-3xl text-mainColor' />
           <div>
             <h5 className='text-lg font-bold mb-1'>Friendly Environment</h5>
-            <p className='text-justify'>Here, car care feels like a friendly catch-up. Our bright,no tech jargon, while we treat your car and the planet with equal care. </p>
+            <p className='text-justify'>Here, car care feels like a friendly catch-up. while we treat your car and the planet with equal care.</p>
           </div>
         </div>
       </div>
 
         {/* Right Div */}
       <div className='flex-1 p-4 bg-gradient-to-b from-slate-300 to-transparent'>
-      <form className="card-body">
+      <form  onSubmit={handleBookService} className="card-body">
         <div className="form-control">
-          <input type="name" name="name" placeholder="Your Name" className="input input-bordered" required />
+          <input type="name" name="name" defaultValue={user?.displayName} placeholder="Your Name" className="input input-bordered" required />
         </div>
 
         <div className='flex gap-5 my-5'>
           <div className="form-control flex-1">
-            <input type="email" name="email" placeholder="Email" className="input" required />
+            <input type="email" name="email" defaultValue={user?.email} placeholder='email' className="input" required />
           </div>
           <div className="form-control flex-1">
-            <input type="email" name="phone" placeholder="Phone" className="input" required />
+            <input type="text" name="phone" placeholder="Phone" className="input" required />
           </div>
         </div>
         <select className="select select-bordered join-item">
@@ -191,33 +221,39 @@ const Services = () => {
             <input type="text" name="vehicle" placeholder="Vehicle Eg:Crown FXS-2024" className="input input-bordered" required />
         </div>
 
-        <div className='flex gap-16 mb-5'>
-          <div className='flex justify-center gap-3'>
-            <input type="radio" id="morning" name="radio-8" className="radio" checked />
-            <label htmlFor="morning">Shuttle</label>
-          </div>
-          
-          <div className='flex justify-center gap-3'>
-            <input type="radio" id="morning" name="radio-8" className="radio" />
-            <label htmlFor="morning">Towed</label>
-          </div>
+        <section className='flex gap-10 mb-5'>
+        <div className="form-control">
+          <label className="label cursor-pointer">
+            <input type="radio" name="radio-10" className="radio mr-2 checked:bg-red-500" checked />
+            <span className="label-text">Shuttle</span> 
+          </label>
         </div>
+        <div className="form-control">
+          <label className="label cursor-pointer">
+            <input type="radio" name="radio-10" className="radio mr-2 checked:bg-blue-500" checked />
+            <span className="label-text">Towed</span> 
+          </label>
+        </div>
+        </section>
 
         <div className='flex gap-5 mb-5'>
-          <div className="form-control flex-1">
-          <input type="date" name="trip-start" id="start" className='input' value="2024-07-10" min="2018-01-01" max="2026-03-30" />
-          </div>
+            <div className="form-control flex-1">
+              <input type="date" name="date" id="start" className='input' min="2018-01-01" max="2026-03-30" />
+            </div>
 
-          <div className="form-control flex-1">
-            <select className="select select-bordered join-item">
-            <option selected>Time</option>
-            <option>09:00 AM</option>
-            <option>10:00 AM</option>
-            <option>11:00 AM</option>
-            <option>12:00 PM</option>
-            <option>03:00 PM</option>
-          </select>
-          </div>
+            <div className="form-control flex-1">
+              <select name="time" className="select select-bordered join-item">
+              <option selected>Time</option>
+              <option value="" disabled selected>
+                Time
+              </option>
+              <option value="09:00 AM">09:00 AM</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="03:00 PM">03:00 PM</option>
+            </select>
+            </div>
         </div>
 
         <div className="form-control mt-6">
