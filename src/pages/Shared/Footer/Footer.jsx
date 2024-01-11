@@ -43,10 +43,6 @@ const Footer = () => {
                 <FaLinkedin></FaLinkedin>
               </a>
               
-              
-              
-              
-              
             </section>
           </div> 
           <div>
