@@ -5,6 +5,8 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import Services from "../pages/Services/Services";
 import Appointment from "../pages/Appointment/Appointment";
+import MyAppointments from "../pages/MyAppointments/MyAppointments";
+import AllAppointments from "../pages/AllAppointments/AllAppointments";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
         {
           path: 'appointment',
           element: <Appointment></Appointment>
+        },
+        {
+          path: 'myappointments',
+          element: <MyAppointments></MyAppointments>
+        },
+        {
+          path: 'allappointments',
+          element: <AllAppointments></AllAppointments>
         },
         {
           path: '/service/:id',

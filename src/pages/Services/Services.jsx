@@ -54,10 +54,9 @@ const Services = () => {
         appointment,
         service_id: _id, 
     }
-    console.log(booking);
+    // console.log(booking);
 
-    // fetch(`http://localhost:5173/service/${services._id}`,{
-    fetch(`http://localhost:5000/bookings`,{
+    fetch("http://localhost:5000/applications",{
     method: 'POST',
     headers: {
       'content-type': 'application/json'

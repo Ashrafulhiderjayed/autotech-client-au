@@ -12,13 +12,9 @@ const ServicesCard = ({service}) => {
         <h2 className="card-title font-extrabold">{title}</h2>
         <p className='text-justify'>{description}</p>
         <div className="card-actions">
-            {/* default button */}
-          {/* <button className="btn btn-primary btn-sm w-full bg-mainColor font-normal text-white hover:bg-black hover:drop-shadow-xl capitalize text-shadow-lg border-0">Book Now</button> */}
-          <button className="btn btn-outline hover:text-white btn-success">
-            <Link to={`/service/${_id}`}>
+            <Link to={`/service/${_id}`} className="text-teal-600 font-bold">
                 Book Now <FaArrowRight className="inline ml-2" />{' '}
             </Link>
-          </button>
         </div>
       </div>
     </section>
