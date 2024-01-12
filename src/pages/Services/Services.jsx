@@ -28,8 +28,8 @@ const Services = () => {
   }
 
   const services = useLoaderData();
-  // console.log('services', services)
-  const {title, top, description, detailDescription, _id} = services;
+  console.log('services', services)
+  const {title, top,img, description, detailDescription, _id} = services;
 
   const handleBookService = event =>{
     event.preventDefault();
@@ -46,6 +46,7 @@ const Services = () => {
     const booking = {
         customerName: name, 
         email, 
+        img,
         phone,
         vehicle,
         date, 

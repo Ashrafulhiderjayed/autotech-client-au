@@ -17,13 +17,13 @@ const Navbar = () => {
   {
     user?.email ? <> 
     <li><Link to='/myappointments'>My Appointments</Link></li>
-    <li> <button onClick={handleLogOut}>Log Out</button> </li>
+    {/* <li> <button onClick={handleLogOut}>Log Out</button> </li> */}
     </>
     :
-    <li><Link to="/login">My Appointments</Link></li>
+    <li><Link to="/signup">My Appointments</Link></li>
   }
   {
-    <li><Link to='/'>Add a Appointment</Link></li>
+    <li><Link to='/'>Make Appointment</Link></li>
   }
   <li><Link to='/'>Blogs</Link></li>
   </>
