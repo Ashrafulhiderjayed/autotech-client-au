@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         },
         {
           path: 'allappointments',
-          element: <AllAppointments></AllAppointments>
+          element: <AllAppointments></AllAppointments>,
         },
         {
           path: '/service/:id',

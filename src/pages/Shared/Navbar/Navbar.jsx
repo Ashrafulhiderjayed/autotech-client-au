@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/img/autoTech-logo.jpg'
+import logo from '../../../assets/img/wheelss - Copy.jpg'
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { FaArrowCircleRight } from 'react-icons/fa';
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
@@ -12,10 +13,14 @@ const Navbar = () => {
 
   const navItems = <>
   <li><Link to='/'>Home</Link></li>
-  <li><Link to='/'>All Appointments</Link></li>
+  <li><Link to='/allappointments'>Appointments</Link></li>
   {
-    // user && <li><Link to='/myappointments'>My Appointments</Link></li>
+    user?.email ? <> 
     <li><Link to='/myappointments'>My Appointments</Link></li>
+    <li> <button onClick={handleLogOut}>Log Out</button> </li>
+    </>
+    :
+    <li><Link to="/login">My Appointments</Link></li>
   }
   {
     <li><Link to='/'>Add a Appointment</Link></li>
@@ -23,8 +28,12 @@ const Navbar = () => {
   <li><Link to='/'>Blogs</Link></li>
   </>
   return (
-  <div className="font-CreteRound navbar bg-base-100 mx-auto max-w-7xl">
-    <img className='h-14 bg-red-500 rounded-lg' src={logo} alt="" />
+  <div className="font-CreteRound navbar bg-base-100 mx-auto max-w-7xl px-0">
+    {/* <h1 className='lg:text-2xl font-bold float'> <GiAutoRepair className='text-5xl' /> Auto Tech</h1> */}
+    <div>
+      <img className='h-12 bg-red-500 rounded-lg mr-2' src={logo} alt="Nav-image" />
+      <h2 className='lg:text-4xl font-extrabold hover:text-mainColor'>AutoTech</h2>
+    </div>
     {/* <a className="btn btn-ghost normal-case text-xl font-bold"><FaCar className='text-primary2 mr-1'/>Wheels</a> */}
     <div className="navbar-start">
       <div className="dropdown">
@@ -57,10 +66,10 @@ const Navbar = () => {
   }
   {
     user? (
-      <button onClick={handleLogOut} className="bg-primary2 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Sign Out</button>
+      <button onClick={handleLogOut} className="bg-primary2 hover:bg-red-700 text-white font-bold py-2 px-4">Sign Out</button>
     ):
     <Link to="/login">
-    <button className="bg-primary hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Login</button>
+    <button className="btn btn-md shadow-2xl bg-mainColor text-white font-bold hover:bg-black">Sign in <FaArrowCircleRight className="inline" /> </button>
   </Link>}
     </div>
   </div>

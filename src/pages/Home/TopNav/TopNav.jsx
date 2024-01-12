@@ -1,12 +1,12 @@
 import { FaPhone } from "react-icons/fa";
 import { GrFormSchedule } from "react-icons/gr";
 import { PiMapPinBold } from "react-icons/pi";
-import './TopNav.css'
 import { Link } from "react-router-dom";
+import './TopNav.css'
 
 const TopNav = () => {
     return (
-        <section className="flex justify-end text-white w-full">
+        <section className="flex justify-end text-white w-full" id="topNav">
             <div className="bg-black littleParallelogram -mr-2 flex justify-end">
 
                 <div className="flex gap-7 px-3 py-1">

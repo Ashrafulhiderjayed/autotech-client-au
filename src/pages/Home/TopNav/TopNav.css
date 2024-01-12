@@ -1,3 +1,16 @@
 .antiParallelogram{
     transform: skew(20deg);
 }
+
+
+
+@media screen and (max-width: 576px){
+    #topNav{
+        display: none;
+    }
+}
+/* @media screen and (max-width: 576){
+    #topNav{
+        display: none;
+    }
+} */

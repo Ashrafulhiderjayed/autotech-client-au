@@ -56,7 +56,7 @@ const Services = () => {
     }
     // console.log(booking);
 
-    fetch("http://localhost:5000/applications",{
+    fetch("http://localhost:5000/appointments",{
     method: 'POST',
     headers: {
       'content-type': 'application/json'
