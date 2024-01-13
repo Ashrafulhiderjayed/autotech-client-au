@@ -72,7 +72,7 @@ const Services = () => {
     }
   })
 
-    // form.reset();
+    form.reset();
   }
 
   useEffect(() => {

@@ -15,17 +15,20 @@ const Navbar = () => {
   <li><Link to='/'>Home</Link></li>
   <li><Link to='/allappointments'>Appointments</Link></li>
   {
-    user?.email ? <> 
+    user?.email?
     <li><Link to='/myappointments'>My Appointments</Link></li>
-    {/* <li> <button onClick={handleLogOut}>Log Out</button> </li> */}
-    </>
     :
     <li><Link to="/signup">My Appointments</Link></li>
   }
   {
-    <li><Link to='/'>Make Appointment</Link></li>
+    <li><Link to='/appointment'>Create an Appointment</Link></li>
   }
-  <li><Link to='/'>Blogs</Link></li>
+  {
+    user?.email?
+    <li><Link to='/dashboard'>Dashboard</Link></li>
+    :
+    <li><Link to='/signup'>Dashboard</Link></li>
+  }
   </>
   return (
   <div className="font-CreteRound navbar bg-base-100 mx-auto max-w-7xl px-0">
@@ -66,10 +69,10 @@ const Navbar = () => {
   }
   {
     user? (
-      <button onClick={handleLogOut} className="bg-primary2 hover:bg-red-700 text-white font-bold py-2 px-4">Sign Out</button>
+      <button onClick={handleLogOut} className="bg-mainColor text-white font-bold py-2 px-4 rounded">Sign Out</button>
     ):
     <Link to="/login">
-    <button className="btn btn-md shadow-2xl bg-mainColor text-white font-bold hover:bg-black">Sign in <FaArrowCircleRight className="inline" /> </button>
+    <button className="btn btn-md shadow-2xl bg-mainColor text-white font-bold rounded hover:bg-black">Sign in <FaArrowCircleRight className="inline" /> </button>
   </Link>}
     </div>
   </div>

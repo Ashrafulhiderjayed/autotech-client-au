@@ -11,7 +11,7 @@ const AllAppointments = () => {
         .then(data => setAppointments(data))
     },[])
     return (
-        <section className="h-screen">
+        <section className="h-screen mx-auto max-w-7xl">
             <table className="table">
                 {/* head */}
                 <thead>
@@ -22,9 +22,9 @@ const AllAppointments = () => {
                     </label>
                     </th>
                     <th>Name</th>
-                    <th>Job</th>
-                    <th>Favorite Color</th>
-                    <th></th>
+                    <th>Date</th>
+                    <th>Model Name</th>
+                    <th>Status</th>
                 </tr>
                 </thead>
                 <tbody>

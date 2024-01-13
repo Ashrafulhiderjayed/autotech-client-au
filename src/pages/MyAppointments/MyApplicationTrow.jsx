@@ -32,7 +32,7 @@ const MyApplicationTrow = ({appointmentDetails, handleDelete}) => {
         </td>
         <td>{vehicle}</td>
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+          <button className="btn btn-ghost btn-xs">Confirm</button>
         </th>
       </tr>
     );

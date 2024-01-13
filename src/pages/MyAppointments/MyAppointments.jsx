@@ -58,9 +58,9 @@ const MyAppointments = () => {
                     </label>
                     </th>
                     <th>Name</th>
-                    <th>Job</th>
-                    <th>Favorite Color</th>
-                    <th></th>
+                    <th>Data</th>
+                    <th>Model Name</th>
+                    <th>Status</th>
                 </tr>
                 </thead>
                 <tbody>

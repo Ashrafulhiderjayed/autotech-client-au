@@ -25,7 +25,7 @@ const SignUp = () => {
                 console.log('created user', user)
             })
             .catch(error => console.log(error))
-
+        form.reset();
     }
 
     const handleGoogleSignIn = () => {

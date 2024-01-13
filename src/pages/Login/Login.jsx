@@ -25,6 +25,7 @@ const Login = () => {
         .catch(error =>{
             console.log(error);
         })
+        form.reset();
     }
 
     const handleGoogleSignIn = () => {
@@ -67,8 +68,8 @@ const Login = () => {
                         </label>
                         </div>
                         <div className="form-control my-6">
-                            <NavLink to="">
-                            <button className="btn bg-loginOrangeColor text-white font-bold w-3/5 px-2 ml-16 rounded-3xl border-none shadow-2xl hover:shadow-xl hover:bg-black">SIGN IN</button>
+                            <NavLink to="/">
+                            <button onClick={() => handleLogin} className="btn bg-loginOrangeColor text-white font-bold w-3/5 px-2 ml-16 rounded-3xl border-none shadow-2xl hover:shadow-xl hover:bg-black">SIGN IN</button>
                             </NavLink>
                         </div>
                     </form>

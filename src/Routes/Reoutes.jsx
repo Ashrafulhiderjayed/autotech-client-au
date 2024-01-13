@@ -8,6 +8,7 @@ import Appointment from "../pages/Appointment/Appointment";
 import MyAppointments from "../pages/MyAppointments/MyAppointments";
 import AllAppointments from "../pages/AllAppointments/AllAppointments";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         {
           path: 'allappointments',
           element: <AllAppointments></AllAppointments>,
+        },
+        {
+          path: 'dashboard',
+          element: <Dashboard></Dashboard>,
         },
         {
           path: '/service/:id',
