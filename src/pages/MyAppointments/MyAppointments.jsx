@@ -14,7 +14,7 @@ const MyAppointments = () => {
         .then(data => setAppointments(data))
     },[])
     return (
-        <div>
+        <section className="h-screen">
             <h1 className="text-3xl">{appointments.length}</h1>
             <div className="overflow-x-auto">
             <table className="table">
@@ -43,7 +43,7 @@ const MyAppointments = () => {
                 
             </table>
             </div>
-        </div>
+        </section>
     );
 };
 

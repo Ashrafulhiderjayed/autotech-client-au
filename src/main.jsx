@@ -6,8 +6,8 @@ import router from './Routes/Reoutes';
 import AuthProvider from './providers/AuthProvider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode style={{overflowX: 'hidden'}}>
-  <React.StrictMode>
+  <React.StrictMode style={{overflowX: 'hidden'}}>
+  {/* <React.StrictMode> */}
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>

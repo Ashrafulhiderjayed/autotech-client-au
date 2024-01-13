@@ -2,6 +2,15 @@
     transform: skew(20deg);
 }
 
+#Custom-width{
+    border-bottom: 50px solid #060606;
+	border-left: 25px solid transparent;
+	display: flex;
+    align-items: center;
+	height: 0;
+	/* width: 550px; */
+}
+
 
 
 @media screen and (max-width: 576px){
@@ -9,8 +18,3 @@
         display: none;
     }
 }
-/* @media screen and (max-width: 576){
-    #topNav{
-        display: none;
-    }
-} */

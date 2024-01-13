@@ -11,7 +11,7 @@ const AllAppointments = () => {
         .then(data => setAppointments(data))
     },[])
     return (
-        <div>
+        <section className="h-screen">
             <h1 className="text-2xl">{appointments.length}</h1>
             <table className="table">
                 {/* head */}
@@ -38,7 +38,7 @@ const AllAppointments = () => {
                 </tbody>
                 
             </table>
-        </div>
+        </section>
     );
 };
 
