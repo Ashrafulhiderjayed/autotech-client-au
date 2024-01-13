@@ -14,7 +14,7 @@ const MyAppointments = () => {
         .then(data => setAppointments(data))
     },[])
     return (
-        <section className="h-screen">
+        <section className="h-screen mx-auto max-w-7xl">
             <h1 className="text-3xl">{appointments.length}</h1>
             <div className="overflow-x-auto">
             <table className="table">

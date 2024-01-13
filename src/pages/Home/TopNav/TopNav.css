@@ -6,7 +6,6 @@
     border-bottom: 50px solid #060606;
 	border-left: 25px solid transparent;
 	display: flex;
-    align-items: center;
 	height: 0;
 	/* width: 550px; */
 }
