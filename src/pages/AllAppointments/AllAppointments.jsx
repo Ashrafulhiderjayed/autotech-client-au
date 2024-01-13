@@ -12,7 +12,6 @@ const AllAppointments = () => {
     },[])
     return (
         <section className="h-screen">
-            <h1 className="text-2xl">{appointments.length}</h1>
             <table className="table">
                 {/* head */}
                 <thead>
@@ -30,8 +29,9 @@ const AllAppointments = () => {
                 </thead>
                 <tbody>
                 {
-                    appointments.map(appointment => <AllAppointmentsRow
+                    appointments.map((appointment, index) => <AllAppointmentsRow
                         key={appointment._id}
+                        index={index}
                         appointmentDetails={appointment}
                     ></AllAppointmentsRow>)
                 }

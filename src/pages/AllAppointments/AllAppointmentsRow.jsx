@@ -1,12 +1,12 @@
 
 
-const AllAppointmentsRow = ({appointmentDetails}) => {
+const AllAppointmentsRow = ({appointmentDetails, index}) => {
     const {customerName, vehicle, date, img, time, appointment} = appointmentDetails;
     return (
         <tr>
         <th>
           <label>
-            <input type="checkbox" className="checkbox" />
+          <h1 className="text-2xl">{index+1}</h1>
           </label>
         </th>
         <td>
