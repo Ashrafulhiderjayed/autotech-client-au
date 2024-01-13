@@ -15,7 +15,7 @@ const MyAppointments = () => {
     },[])
     return (
         <section className="h-screen mx-auto max-w-7xl">
-            <h1 className="text-3xl">{appointments.length}</h1>
+            
             <div className="overflow-x-auto">
             <table className="table">
                 {/* head */}
@@ -23,7 +23,7 @@ const MyAppointments = () => {
                 <tr>
                     <th>
                     <label>
-                        <input type="checkbox" className="checkbox" />
+                        <h1 className="text-3xl">{appointments.length}</h1>
                     </label>
                     </th>
                     <th>Name</th>
