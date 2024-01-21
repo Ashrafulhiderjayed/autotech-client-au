@@ -3,12 +3,16 @@ import { FaFacebookF } from "react-icons/fa";
 import { IoLogoGoogleplus } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
 import './SignUp.css'
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const SignUp = () => {
     const { createUser, signInWithGoogle } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -16,13 +20,14 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password)
+        // console.log(name, email, password)
 
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log('created user', user)
+                // console.log('created user', user)
+                navigate(from, { replace: true });
             })
             .catch(error => console.log(error))
         form.reset();
@@ -32,7 +37,8 @@ const SignUp = () => {
         signInWithGoogle()
         .then(result => {
             const loggedUser = result.user;
-            console.log(loggedUser);
+            // console.log(loggedUser);
+            navigate(from, { replace: true });
         })
         .catch(error => {
             console.log(error)
