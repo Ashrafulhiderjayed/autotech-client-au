@@ -18,7 +18,7 @@ const AllAppointments = () => {
                 <tr>
                     <th>
                     <label>
-                        <input type="checkbox" className="checkbox" />
+                        <h1 className="text-lg">No.</h1>
                     </label>
                     </th>
                     <th>Name</th>
