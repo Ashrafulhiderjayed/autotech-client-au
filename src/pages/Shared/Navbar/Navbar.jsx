@@ -18,7 +18,7 @@ const Navbar = () => {
     user?.email?
     <li><Link to='/myappointments'>My Appointments</Link></li>
     :
-    <li><Link to="/signup">My Appointments</Link></li>
+    <li><Link to="/signup">Appointments History</Link></li>
   }
   {
     <li><Link to='/appointment'>Create an Appointment</Link></li>
@@ -73,7 +73,8 @@ const Navbar = () => {
     ):
     <Link to="/login">
     <button className="btn btn-md shadow-2xl bg-mainColor text-white font-bold rounded hover:bg-black">Sign in <FaArrowCircleRight className="inline" /> </button>
-  </Link>}
+  </Link>
+  }
     </div>
   </div>
   );
