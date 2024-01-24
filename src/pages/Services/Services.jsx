@@ -2,7 +2,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import backgroundImage from '../../assets/img/SUV-blue.svg';
 import { TbCircleCheckFilled } from "react-icons/tb";
 import { RiOilFill } from "react-icons/ri";
-import { FaArrowCircleRight, FaCarCrash } from "react-icons/fa";
+import { FaCarCrash } from "react-icons/fa";
 import { GiAutoRepair } from "react-icons/gi";
 import { GiCartwheel } from "react-icons/gi";
 import { GiCarWheel } from "react-icons/gi";

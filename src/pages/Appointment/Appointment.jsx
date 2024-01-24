@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { BsSpeedometer } from "react-icons/bs";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiNewspaper } from "react-icons/gi";
+import { AuthContext } from "../../providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Appointment = () => {
+    const {user} = useContext(AuthContext);
     return (
         <section className="mx-auto max-w-7xl text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-mainColor mb-2 mt-32">Schedule Your Appointment Online</h2>
@@ -92,7 +96,14 @@ const Appointment = () => {
                     </div>
 
                     <div className="form-control mt-6">
-                    <button className="btn bg-mainColor text-white hover:bg-black font-bold">Request Appointment</button>
+                    {
+                        user? (
+                        <button className="btn bg-mainColor text-white hover:bg-black" type='submit'>Request Appointment</button>
+                        ):
+                        <Link to="/login">
+                            <button className="btn w-full bg-mainColor text-white hover:bg-black" type='submit'>Request Appointment</button>
+                        </Link>
+                    }
                     </div>
                 </form> 
                 </div>
