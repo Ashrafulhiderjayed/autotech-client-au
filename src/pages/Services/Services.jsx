@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, Navigate, useLoaderData, useLocation } from 'react-router-dom';
 import backgroundImage from '../../assets/img/SUV-blue.svg';
 import { TbCircleCheckFilled } from "react-icons/tb";
 import { RiOilFill } from "react-icons/ri";
@@ -20,6 +20,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Services = () => {
   const {user} = useContext(AuthContext);
+  const location = useLocation();
   const heroStyle = {
       backgroundImage: `url(${backgroundImage})`,
       backgroundPosition: '86px 0',
@@ -93,7 +94,7 @@ const Services = () => {
           <p className="mb-5 text-justify shadow-2xl w-3/4 sm:text-sm lg:text-lg">
           {description}
           </p>
-          <button className="btn btn-primary bg-white text-mainColor font-bold lg:px-8">Schedule Appointment</button>
+          <button className="btn bg-white text-mainColor font-bold lg:px-8">Schedule Appointment</button>
         </div>
       </div>
       </div>
@@ -280,9 +281,11 @@ const Services = () => {
             user? (
               <button className="btn bg-mainColor text-white hover:bg-black" type='submit'>Submit Now</button>
             ):
-            <Link to="/login">
+            <Link to="/signup">
               <button className="btn w-full bg-mainColor text-white hover:bg-black" type='submit'>Submit Now</button>
             </Link>
+            // <Navigate state={{ from: location }} to="/signup" replace></Navigate>
+            // <PrivateRoute><button className="btn w-full bg-mainColor text-white hover:bg-black" type='submit'>Submit Now</button></PrivateRoute>
           }
         </div>
       </form> 

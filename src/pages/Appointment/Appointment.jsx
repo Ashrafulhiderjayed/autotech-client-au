@@ -1,12 +1,35 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { BsSpeedometer } from "react-icons/bs";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiNewspaper } from "react-icons/gi";
 import { AuthContext } from "../../providers/AuthProvider";
+import emailjs from '@emailjs/browser';
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Appointment = () => {
     const {user} = useContext(AuthContext);
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_vpz3ifh', 'template_gpdg2ca', form.current, 'iQeITfrps3IWheK58')
+      .then((result) => {
+        if(result.status === 200){
+            Swal.fire({
+                title: "Appointment Successful!",
+                text: "Check your email varification!",
+                icon: "success"
+              });
+        }
+      })
+      .catch((error) => {
+        console.log(error.text);
+      });
+  };
+  
+
     return (
         <section className="mx-auto max-w-7xl text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-mainColor mb-2 mt-32">Schedule Your Appointment Online</h2>
@@ -29,18 +52,18 @@ const Appointment = () => {
             <div className='flex justify-center'>
                 
                 <div className="p-4 w-4/5 bg-gradient-to-b from-slate-300 to-transparent">
-                <form className="card-body">
+                <form className="card-body" ref={form} onSubmit={sendEmail}>
                 <p className="font-bold lg:text-xl text-left my-3">Contact Infomation</p>
                     <div className="form-control">
-                    <input type="name" placeholder="Your Name" className="input input-bordered" required />
+                    <input type="text" name="user_name" placeholder="Your Name" className="input input-bordered" required />
                     </div>
 
                     <div className='lg:flex gap-5 my-5'>
                     <div className="form-control lg:flex-1">
-                        <input type="email" placeholder="Email" className="input" required />
+                        <input type="email" name="user_email" placeholder="Email" className="input" required />
                     </div>
                     <div className="form-control lg:flex-1">
-                        <input type="email" placeholder="Phone" className="input" required />
+                        <input type="number" placeholder="Phone" className="input" required />
                     </div>
                     </div>
                     <select className="select select-bordered join-item">
@@ -55,7 +78,7 @@ const Appointment = () => {
 
                     <p className="font-bold lg:text-xl text-left mt-11 mb-3">Vehicle Infomation</p>
                     <div className="form-control">
-                        <input type="text" placeholder="Vehicle Eg:Crown FXS-2024" className="input input-bordered" required />
+                        <input type="text" name="user_vehicle" placeholder="Vehicle Eg:Crown FXS-2024" className="input input-bordered" required />
                     </div>
 
                     <p className="font-bold lg:text-xl text-left mt-11 mb-3">Please Tell Us Does Your vehicle need to be:</p>
@@ -73,13 +96,14 @@ const Appointment = () => {
 
                     <p className="font-bold lg:text-xl text-left mt-11 mb-4">Please Tell Us Your Reason for Scheduling an Appointment</p>
                     <div className="form-control">
-                        <textarea placeholder="Message" className="textarea textarea-bordered textarea-sm w-full" ></textarea>
+                        <textarea name="message" placeholder="Message" className="textarea textarea-bordered textarea-sm w-full" ></textarea>
                     </div>
 
                     <p className="font-bold lg:text-xl text-left mt-11 mb-3">Choose Date and Time</p>
                     <div className='lg:flex gap-5 mb-5'>
                     <div className="form-control flex-1">
-                    <input type="date" id="start" className='input' name="trip-start" value="2024-07-10" min="2018-01-01" max="2026-03-30" />
+                    {/* <input type="date" id="start" className='input' name="trip-start" value="2024-07-10" min="2018-01-01" max="2026-03-30" /> */}
+                    <input type="date" id="start" className='input' name="date" value="2024-07-10" min="2018-01-01" max="2026-03-30" />
                     </div>
 
                     
@@ -98,10 +122,10 @@ const Appointment = () => {
                     <div className="form-control mt-6">
                     {
                         user? (
-                        <button className="btn bg-mainColor text-white hover:bg-black" type='submit'>Request Appointment</button>
+                        <button className="btn bg-mainColor text-white hover:bg-black" type='submit' value="Send">Request Appointment</button>
                         ):
                         <Link to="/login">
-                            <button className="btn w-full bg-mainColor text-white hover:bg-black" type='submit'>Request Appointment</button>
+                            <button className="btn w-full bg-mainColor text-white hover:bg-black" type='submit' value="Send">Request Appointment</button>
                         </Link>
                     }
                     </div>

@@ -9,7 +9,8 @@ export default {
       colors:{
         // primary: 'Crimson', //eta toy car er color
         // primary: '#fe541d', //eta orange type car rent website er
-        mainColor: '#DB2411',
+        mainColor: '#db2411',
+        mainColor2: '#DB2411',
         rentOrange: '#fe541d', 
         footerColor: '#1B3E41',
         loginOrangeColor: '#FF4B2B',

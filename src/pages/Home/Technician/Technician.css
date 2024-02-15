@@ -1,0 +1,99 @@
+
+.student-card .title h1{
+    font-family: Gilroy;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2%;
+}
+
+.student-card{
+    padding-top: 2%;
+    background-color: #ce4f3b;
+    /* background-color: #e07768; */
+}
+
+.student-card .title p{
+    font-family: Open Sans;
+    color: white;
+    text-align: center;
+}
+
+.student-card-img{
+    background-image: url('../../../../src/assets/img/r2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position: center top;
+}
+.student-card-img2{
+    background-image: url('../../../../src/assets/img/professional.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position: center top;
+}
+.student-card-img3{
+    background-image: url('../../../../src/assets/img/r2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position: center top;
+}
+
+.student-card .image{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+}
+
+.student-card .image .inner{
+    height: 125px;
+    width: 125px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.student-card .image .outer{
+    background-color: #fefefe;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-card .image .inner img{
+    width: 100%;
+    /* object-position: 50% 50%; */
+}
+
+.student-card .name{
+    color: white;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.student-card .details{
+    background-color: #2d7278;
+    /* background-color: #4aada9; */
+    /* background-color: #e07768; */
+    height: 40%;
+    margin-top: 10%;
+    border-top-left-radius: 75px;
+    padding: 5%;
+}
+
+
+@media screen and (max-width: 576px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}

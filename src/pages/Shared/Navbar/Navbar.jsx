@@ -3,6 +3,7 @@ import logo from '../../../assets/img/wheelss - Copy.jpg'
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { FaArrowCircleRight } from 'react-icons/fa';
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
@@ -24,6 +25,14 @@ const Navbar = () => {
     <li><Link to='/appointment'>Create an Appointment</Link></li>
   }
   {
+    <li><Link to='/appointment'>
+      <button className="btn">
+        <FaShoppingCart />
+        <div className="badge badge-secondary">+0</div>
+      </button>
+    </Link></li>
+  }
+  {
     user?.email?
     <li><Link to='/dashboard'>Dashboard</Link></li>
     :
@@ -35,7 +44,7 @@ const Navbar = () => {
     {/* <h1 className='lg:text-2xl font-bold float'> <GiAutoRepair className='text-5xl' /> Auto Tech</h1> */}
     <div>
       <img className='h-12 bg-red-500 rounded-lg mr-2' src={logo} alt="Nav-image" />
-      <h2 className='lg:text-4xl font-extrabold hover:text-mainColor'>AutoTech</h2>
+      <h2 className='lg:text-4xl font-extrabold text-mainColor hover:text-black'>AutoTech</h2>
     </div>
     {/* <a className="btn btn-ghost normal-case text-xl font-bold"><FaCar className='text-primary2 mr-1'/>Wheels</a> */}
     <div className="navbar-start">
@@ -71,8 +80,8 @@ const Navbar = () => {
     user? (
       <button onClick={handleLogOut} className="bg-mainColor text-white font-bold py-2 px-4 rounded">Sign Out</button>
     ):
-    <Link to="/login">
-    <button className="btn btn-md shadow-2xl bg-mainColor text-white font-bold rounded hover:bg-black">Sign in <FaArrowCircleRight className="inline" /> </button>
+    <Link to="/signup">
+    <button className="btn btn-md shadow-2xl bg-mainColor text-white font-bold rounded hover:bg-black">Sign up<FaArrowCircleRight className="inline" /> </button>
   </Link>
   }
     </div>

@@ -24,7 +24,8 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             // console.log(user);
-            navigate(from, {replace: true});
+            // navigate(from, {replace: true});
+            navigate(location?.state ? location?.state : '/')
         })
         .catch(error =>{
             console.log(error);
@@ -37,7 +38,8 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             // console.log(loggedUser);
-            navigate(from, { replace: true });
+            // navigate(from, { replace: true });
+            navigate(location?.state ? location?.state : '/')
         })
         .catch(error => {
             console.log(error)

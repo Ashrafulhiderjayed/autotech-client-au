@@ -22,23 +22,24 @@ const Footer = () => {
             <img className='h-16 bg-red-500 rounded-lg' src={logo} alt="" data-aos="fade-left"/>
             <p>AutoTech Ltd.<br/>Providing reliable and affordable toy since 1992</p>
             <p className='text-lightWhite text-justify mt-8 mb-2'>Discover peace of mind on the road with our expert car repair services. <br /> At AutoTech, our dedicated team of skilled technicians is committed to <br /> delivering reliable and top-notch repairs for your vehicle. </p>
-            <section className='flex gap-4' data-aos="fade-up" data-aos-delay="50">
-              <a href="https://www.facebook.com/">
+            {/* <section className='flex gap-4' data-aos="fade-up" data-aos-delay="50"> */}
+            <section className='flex gap-4'>
+              <a href="https://www.facebook.com/" data-aos="fade-up" data-aos-delay="10">
                 <FaFacebook></FaFacebook>
               </a>
-              <a href="https://www.youtube.com/">
+              <a href="https://www.youtube.com/" data-aos="fade-up" data-aos-delay="20">
                 <FaYoutube></FaYoutube>
               </a>
-              <a href="https://www.instagram.com/">
+              <a href="https://www.instagram.com/" data-aos="fade-up" data-aos-delay="30">
                 <FaInstagram></FaInstagram>
               </a>
-              <a href="https://twitter.com/">
+              <a href="https://twitter.com/" data-aos="fade-up" data-aos-delay="40">
                 <FaTwitter></FaTwitter>
               </a>
-              <a href="https://support.google.com/phoneapp/answer/2811844?hl=en">
+              <a href="https://support.google.com/phoneapp/answer/2811844?hl=en" data-aos="fade-up" data-aos-delay="50">
                 <FaVoicemail></FaVoicemail>
               </a>
-              <a href="https://www.linkedin.com/">
+              <a href="https://www.linkedin.com/" data-aos="fade-up" data-aos-delay="100">
                 {/* <FaLinkedinIn></FaLinkedinIn> */}
                 <FaLinkedin></FaLinkedin>
               </a>
