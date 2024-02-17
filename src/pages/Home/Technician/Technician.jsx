@@ -3,14 +3,16 @@ import './Technician.css';
 import { FaShoppingCart } from "react-icons/fa";
 import technitian1 from '../../../../src/assets/img/professional.jpg';
 import technitian2 from '../../../../src/assets/img/r2.jpg';
-import technitian3 from '../../../../src/assets/img/r1.jpg';
+import technitian3 from '../../../../src/assets/img/technitian1.jpeg';
 import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import useCart from '../../../hooks/useCart';
 
 const Technician = () => {
     const {user} = useContext(AuthContext);
+    const [,refetch] = useCart();
     const navigate = useNavigate();
   const technicians = [
     {
@@ -56,11 +58,12 @@ const Technician = () => {
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
-                Swal.fire({
-                    title: "Techinitian Added",
-                    text: "Successfully",
-                    icon: "success"
-                  });
+              Swal.fire({
+                title: "Techinitian Added",
+                text: "Successfully",
+                icon: "success"
+              });
+              refetch(); // refetch cart to update the number of items in the cart
             }
         })
     }    
@@ -97,8 +100,9 @@ const Technician = () => {
            </div>
            <div className="image">
                <div className="outer">
-                   <div className="inner student-card-img3">
-                       {/* <img src={img1}></img> */}
+                   {/* <div className="inner student-card-img3"> */}
+                   <div className="inner bg-black" >
+                       <img src={technician.img} className='h-auto w-1/2 mt-5'></img>
                    </div>
                </div>
            </div>

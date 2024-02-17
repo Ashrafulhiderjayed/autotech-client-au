@@ -8,7 +8,7 @@ import Appointment from "../pages/Appointment/Appointment";
 import MyAppointments from "../pages/MyAppointments/MyAppointments";
 import AllAppointments from "../pages/AllAppointments/AllAppointments";
 import PrivateRoute from "./PrivateRoute";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import Dashboard from "../Layout/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -51,6 +51,17 @@ const router = createBrowserRouter([
         
       ]
     },
+    {
+      path: 'dashboard',
+      element: <Dashboard></Dashboard>,
+      children: [
+        {
+          path: 'mycart',
+          element: <mycart></mycart>
+        }
+      ]
+    }
+
 ]);
 
 export default router;

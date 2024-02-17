@@ -4,9 +4,11 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { FaArrowCircleRight } from 'react-icons/fa';
 import { FaShoppingCart } from "react-icons/fa";
+import useCart from '../../../hooks/useCart';
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
+  const [cart] = useCart();
 
   const handleLogOut = () => {
     logOut().then().catch();
@@ -25,10 +27,10 @@ const Navbar = () => {
     <li><Link to='/appointment'>Create an Appointment</Link></li>
   }
   {
-    <li><Link to='/appointment'>
+    <li><Link to='/dashboard/mycart'>
       <button className="btn">
         <FaShoppingCart />
-        <div className="badge badge-secondary">+0</div>
+        <div className="badge badge-secondary">+{cart?.length || 0}</div>
       </button>
     </Link></li>
   }
