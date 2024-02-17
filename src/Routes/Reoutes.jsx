@@ -9,6 +9,7 @@ import MyAppointments from "../pages/MyAppointments/MyAppointments";
 import AllAppointments from "../pages/AllAppointments/AllAppointments";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dashboard";
+import MyCart from "../pages/Dashboard/MyCart";
 
 const router = createBrowserRouter([
     {
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
       children: [
         {
           path: 'mycart',
-          element: <mycart></mycart>
+          element: <MyCart></MyCart>
         }
       ]
     }

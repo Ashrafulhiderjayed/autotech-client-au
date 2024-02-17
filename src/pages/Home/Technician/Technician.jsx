@@ -20,7 +20,7 @@ const Technician = () => {
       name: 'John Doe',
       skill: 'Tire Repair',
       Contact: '+604282931',
-      price: '$50/hour',
+      price: 50,
       img: technitian1,
       location: 'Sydney'
     },
@@ -29,7 +29,7 @@ const Technician = () => {
       name: 'Jane Smith',
       skill: 'Engine oil change',
       Contact: '+604282931',
-      price: '$60/hour',
+      price: 60,
       img: technitian2,
       location: 'Brisbane'
     },
@@ -38,7 +38,7 @@ const Technician = () => {
       name: 'Alex Johnson',
       skill: 'Break Repair',
       Contact: '+604282931',
-      price: '$70/hour',
+      price: 70,
       img: technitian3,
       location: 'Melbourne'
     }
